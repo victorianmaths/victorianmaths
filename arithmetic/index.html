@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMV | Arithmetic Trainer</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="trainer.css">
+    <link rel="icon" type="image/x-icon" href="../IMVyt.ico">
+</head>
+<body>
+
+    <div id="settings-view" class="container">
+        <h1 class="company-name" style="text-align: left;">Arithmetic Trainer</h1>
+        <p class="footer-note">
+            A fast-paced drill. Solve as many problems as you can before time runs out.
+        </p>
+
+        <div class="settings-grid">
+            <div class="option">
+                <input type="checkbox" id="add" checked> <label for="add"><strong>Addition</strong></label>
+                <div class="link-date">Range: (<input type="number" id="add-min" value="2"> to <input type="number" id="add-max" value="100">)</div>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="sub" checked> <label for="sub"><strong>Subtraction</strong></label>
+                <div class="link-date">Range: Result must be positive.</div>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="mult" checked> <label for="mult"><strong>Multiplication</strong></label>
+                <div class="link-date">Range: (<input type="number" id="mult-min" value="2"> to <input type="number" id="mult-max" value="12">) &times; (2 to 100)</div>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="div" checked> <label for="div"><strong>Division</strong></label>
+                <div class="link-date">Multiplication problems in reverse.</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-settings">
+            <span style="font-size: 20px;">Duration:</span> 
+            <select id="duration">
+                <option value="60">60 seconds</option>
+                <option value="120" selected>120 seconds</option>
+                <option value="300">300 seconds</option>
+            </select>
+            <button id="start-btn" class="action-btn">Start Game</button>
+        </div>
+        
+        <p style="margin-top: 20px;"><a href="../index.html">Return to Home</a></p>
+    </div>
+
+    <div id="game-view" class="hidden">
+        <div class="stats-bar">
+            <div id="timer">Seconds left: 120</div>
+            <div id="score">Score: 0</div>
+        </div>
+
+        <div class="problem-container">
+            <span id="problem-text"></span>
+            <input type="number" id="answer-input" autocomplete="off">
+        </div>
+    </div>
+
+    <div id="recap-view" class="hidden container">
+        <h1 class="company-name">Time's Up!</h1>
+        <div class="final-score">Final Score: <span id="final-score-val">0</span></div>
+        <button onclick="location.reload()" class="action-btn">Try Again</button>
+    </div>
+
+    <script src="trainer.js"></script>
+</body>
+</html>
