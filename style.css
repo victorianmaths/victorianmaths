@@ -31,11 +31,6 @@ a.text-red:visited {
     margin-bottom: 20px;
 }
 
-.header-logo {
-    max-height: 80px;
-    margin-bottom: 10px;
-}
-
 .company-name {
     font-size: 24px;
     font-weight: bold;
